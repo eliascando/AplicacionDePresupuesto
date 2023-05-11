@@ -97,14 +97,6 @@ const eliminarEgreso = id => {
     cargarEgresos();
 }
 
-let cargarEgresos = () => {
-    let egresosHTML = '';
-    for(let egreso of egresos){
-        egresosHTML += crearEgresoHTML(egreso);
-    }
-    document.getElementById('lista-egresos').innerHTML = egresosHTML;
-}
-
 let agregarDato = () => {
     let forma = document.forms['forma'];
     let tipo = forma['tipo'];
@@ -122,4 +114,12 @@ let agregarDato = () => {
             cargarEgresos();
         }
     }
+}
+
+let cargarEgresos = () => {
+    let egresosHTML = '';
+    for(let egreso of egresos){
+        egresosHTML += crearEgresoHTML(egreso);
+    }
+    document.getElementById('lista-egresos').innerHTML = egresosHTML;
 }
