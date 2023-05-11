@@ -119,7 +119,7 @@ let agregarDato = () => {
         else if(tipo.value === 'egreso'){
             egresos.push(new Egreso(descripcion.value, +valor.value));
             cargarCabecero();
-            cargarIngresos();
+            cargarEgresos();
         }
     }
 }
